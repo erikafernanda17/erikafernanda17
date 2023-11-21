@@ -1,0 +1,39 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Usuários</title>
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'cardapio' %}">Cardápio</a></li>
+            <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+        </ul>
+    </nav>
+    <h1 id="nome">Usuários Cadastrados</h1>
+    <br>
+    <div class="container">
+        <table id="tabela">
+            <tr id="coluna">
+                <th>id</th>
+                <th>nome</th>
+                <th>sobrenome</th>
+                <th>email</th>
+            </tr>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{usuario.id_usuario}}</td>
+                <td>{{usuario.nome}}</td>
+                <td>{{usuario.sobrenome}}</td>
+                <td>{{usuario.email}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

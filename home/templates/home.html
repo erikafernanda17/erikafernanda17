@@ -1,0 +1,56 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Home</title>
+   
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'cardapio' %}">Cardápio</a></li>
+            <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+        </ul>
+    </nav>
+    <h1 id="nome">Padaria</h1>
+    <h1 id="nome">Café e conversa</h1>
+    <br>
+    <h2 id="info">Sobre nós</h2>
+    <p id="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex expedita ipsam quo facilis ab asperiores error velit,
+        deserunt libero nisi minus nulla accusamus. Rerum impedit, sed voluptatibus eius necessitatibus doloribus!<br>Lorem ipsum dolor
+        sit, amet consectetur adipisicing elit. Ex expedita ipsam quo facilis ab asperiores error velit, deserunt libero nisi minus
+        nulla accusamus. Rerum impedit, sed voluptatibus eius necessitatibus doloribus!<br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex expedita ipsam quo facilis ab asperiores error velit,
+        deserunt libero nisi minus nulla accusamus. Rerum impedit, sed voluptatibus eius necessitatibus doloribus!<br>Lorem ipsum dolor
+        sit, amet consectetur adipisicing elit. Ex expedita ipsam quo facilis ab asperiores error velit, deserunt libero nisi minus
+        nulla accusamus. Rerum impedit, sed voluptatibus eius necessitatibus doloribus!
+    </p>
+    <br>
+    <h2 id="horario">Horário de Funcionamento</h2>
+    <p id="texto">Seg à Dom - 7hrs às 22hrs</p>
+    <br>
+    <h2 id="produtos">Mais vendidos</h2>
+    <br>
+    <div class="imagenshome">
+        <img src="{% static 'imagens/bolo200.jpg' %}" alt="bolo2">
+        <p id="desc">Bolo de chocolate<br>R$2,50<br>1 fatia</p>
+    </div>
+    <div class="imagenshome">
+        <img src="{% static 'imagens/bolo200.jpg' %}" alt="bolo2">
+        <p id="desc">Bolo de chocolate<br>R$2,50<br>1 fatia</p>
+    </div>
+    <div class="imagenshome">
+        <img src="{% static 'imagens/bolo200.jpg' %}" alt="bolo2">
+        <p id="desc">Bolo de chocolate<br>R$2,50<br>1 fatia</p>
+    </div>
+    <div class="imagenshome">
+        <img src="{% static 'imagens/bolo200.jpg' %}" alt="bolo2">
+        <p id="desc">Bolo de chocolate<br>R$2,50<br>1 fatia</p>
+    </div>
+    <div class="imagenshome">
+        <img src="{% static 'imagens/bolo200.jpg' %}" alt="bolo2">
+        <p id="desc">Bolo de chocolate<br>R$2,50<br>1 fatia</p>
+    </div>

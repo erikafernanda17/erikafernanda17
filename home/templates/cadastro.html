@@ -1,0 +1,40 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Cadastro</title>
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'cardapio' %}">Cardápio</a></li>
+            <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+        </ul>
+    </nav>
+    <h1 id="nome">Cadastro</h1>
+    <br>
+    <p id="texto1">Realize seu cadastro preenchendo os campos abaixo.</p>
+    <form action="{% url 'usuarios' %}" method="post">
+        {% csrf_token %}
+        <fieldset class="campos">
+            <div class="formulario">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" required>
+            </div>
+            <div class="formulario">
+                <label>Sobrenome</label>
+                <input type="text" name="sobrenome" required>
+            </div>
+            <div class="formulario">
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+        </fieldset>
+            <button class="botao" type="submit">Enviar</button>
+    </form>
+</body>
+</html>
